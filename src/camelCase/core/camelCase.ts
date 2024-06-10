@@ -1,5 +1,4 @@
 export const toLowerCamelCase = (str: string): string => {
-  return str
-    ?.split("_")?.map((w) => `${w[0].toUpperCase()}${w?.slice(1, w?.length -1)}`)?.join("")
-    ?.split(" ")?.join("");
+   const words = str.split(/[ _-]/);
+   return words.map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join("");
 }

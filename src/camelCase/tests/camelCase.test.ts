@@ -7,10 +7,19 @@ describe("camelCase", () => {
   test("Allow title case", () => {
     expect(toLowerCamelCase("Title")).toBe("Title");
   });
-  test("Allow words separated by spaces", () => {
+  test("Joins words separated by spaces", () => {
     expect(toLowerCamelCase("Words Separated")).toBe("WordsSeparated");
   });
-  test("Allow words separated by _", () => {
-    expect(toLowerCamelCase("other-words_Separated")).toBe("OtherWordsSeparated");
+  test("Joins words separated by _", () => {
+    expect(toLowerCamelCase("Other-Words_Separated")).toBe("OtherWordsSeparated");
+  });
+  test("Convert the firsts character of one word into uppercase", () => {
+    expect(toLowerCamelCase("other")).toBe("Other");
+  });
+  test("Convert the firsts character of one word into uppercase", () => {
+    expect(toLowerCamelCase("other")).toBe("Other");
+  });
+  test("Convert the firsts letter of each word to uppercase", () => {
+    expect(toLowerCamelCase("other words-separated")).toBe("OtherWordsSeparated");
   });
 });

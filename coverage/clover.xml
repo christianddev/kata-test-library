@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717949671483" clover="3.2.0">
-  <project timestamp="1717949671483" name="All files">
-    <metrics statements="3" coveredstatements="3" conditionals="28" coveredconditionals="21" methods="2" coveredmethods="2" elements="33" coveredelements="26" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
+<coverage generated="1717994200063" clover="3.2.0">
+  <project timestamp="1717994200063" name="All files">
+    <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="5" coveredelements="5" complexity="0" loc="3" ncloc="3" packages="1" files="1" classes="1"/>
     <file name="camelCase.ts" path="/workspaces/kata-test-library/src/camelCase/core/camelCase.ts">
-      <metrics statements="3" coveredstatements="3" conditionals="28" coveredconditionals="21" methods="2" coveredmethods="2"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="2" count="4" type="cond" truecount="15" falsecount="5"/>
-      <line num="3" count="5" type="cond" truecount="6" falsecount="2"/>
+      <line num="2" count="7" type="stmt"/>
+      <line num="3" count="12" type="stmt"/>
     </file>
   </project>
 </coverage>
