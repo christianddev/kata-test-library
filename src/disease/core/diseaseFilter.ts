@@ -3,7 +3,7 @@ type Note = {
   content: 'public' | 'private';
 };
 
-type Case = {
+export type Case = {
   id: number;
   patientName: string;
   diagnosisId: number;
@@ -40,29 +40,26 @@ export class DiseaseFilter {
     return this.filters.flatMap(fromFiltersToCases);
   }
 }
-const cases: Case[] = [
-  {
-    id: 1,
-    patientName: 'John Doe',
-    diagnosisId: 1,
-    diagnosisName: 'Diabetes',
-    publicNotes: [{ id: 1, content: 'public' }],
-    privateNotes: [{ id: 1, content: 'private' }],
-  },
-  {
-    id: 2,
-    patientName: 'Jane Doe',
-    diagnosisId: 2,
-    diagnosisName: 'Cancer',
-    publicNotes: [{ id: 1, content: 'public' }],
-    privateNotes: [{ id: 1, content: 'private' }],
-  },
-];
-const diagnoses: Diagnosis[] = [
-  { id: 1, name: 'Diabetes', location: 'Pancreas', system: 'Endocrine', origin: 'Genetic', specie: 'Human' },
-  { id: 2, name: 'Cancer', location: 'Lung', system: 'Respiratory', origin: 'Environmental', specie: 'Human' },
-];
-const a = DiseaseFilter.create(cases, diagnoses);
-
-a.addFilter('Pancreas');
-a.caseFiltered; // [{ id: 1, patientName: 'John Doe', diagnosisId: 1, diagnosisName: 'Diabetes', publicNotes: [{ id: 1, content: 'public' }], privateNotes: [{ id: 1, content: 'private' }] }]
+// const cases: Case[] = [
+//   {
+//     id: 1,
+//     patientName: 'John Doe',
+//     diagnosisId: 1,
+//     diagnosisName: 'Diabetes',
+//     publicNotes: [{ id: 1, content: 'public' }],
+//     privateNotes: [{ id: 1, content: 'private' }],
+//   },
+//   {
+//     id: 2,
+//     patientName: 'Jane Doe',
+//     diagnosisId: 2,
+//     diagnosisName: 'Cancer',
+//     publicNotes: [{ id: 1, content: 'public' }],
+//     privateNotes: [{ id: 1, content: 'private' }],
+//   },
+// ];
+// const diagnoses: Diagnosis[] = [
+//   { id: 1, name: 'Diabetes', location: 'Pancreas', system: 'Endocrine', origin: 'Genetic', specie: 'Human' },
+//   { id: 2, name: 'Cancer', location: 'Lung', system: 'Respiratory', origin: 'Environmental', specie: 'Human' },
+// ];
+// const a = DiseaseFilter.create(cases, diagnoses);
